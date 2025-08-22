@@ -3,7 +3,7 @@ from tkinter.ttk import Progressbar
 import tkinter
 import tkinter.messagebox
 import pyperclip
-import random, string
+import secrets, string
 
 no_of_options = 0
 length_value = 7
@@ -51,171 +51,131 @@ def generate_pass():
 
 
 def generate1():
-    "Upper Smaller"
+    "Upper and Lower letters"
     try:
         n = int(length_value)
-        password = ""
-        up_sm = string.ascii_uppercase + string.ascii_lowercase
-        password = password.join(random.sample(up_sm, n))
-        return password
+        chars = string.ascii_uppercase + string.ascii_lowercase
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate2():
-    "Upper smaller number"
+    "Upper, Lower letters and Numbers"
     try:
         n = int(length_value)
-        password = ""
-        up_sm_num = string.ascii_uppercase + string.ascii_lowercase + string.digits
-        password = password.join(random.sample(up_sm_num, n))
-        return password
+        chars = string.ascii_uppercase + string.ascii_lowercase + string.digits
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate3():
-    "Number"
+    "Numbers only"
     try:
         n = int(length_value)
-        password = ""
-        num = string.digits
-        password = password.join(random.sample(num, n))
-        return password
+        chars = string.digits
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate4():
-    "Upper smaller number special"
+    "Upper, Lower, Numbers and Special characters"
     try:
         n = int(length_value)
-        password = ""
-        up_sm_num_spc = string.ascii_uppercase + string.ascii_lowercase + string.digits + string.punctuation
-        password = password.join(random.sample(up_sm_num_spc, n))
-        return password
+        chars = string.ascii_uppercase + string.ascii_lowercase + string.digits + string.punctuation
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate5():
-    "Smaller"
+    "Lowercase letters only"
     try:
         n = int(length_value)
-        password = ""
-        sm = string.ascii_lowercase
-        password = password.join(random.sample(sm, n))
-        return password
+        chars = string.ascii_lowercase
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate6():
-    "Upper"
+    "Uppercase letters only"
     try:
         n = int(length_value)
-        password = ""
-        up = string.ascii_uppercase
-        password = password.join(random.sample(up, n))
-        return password
+        chars = string.ascii_uppercase
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate7():
-    "Special"
+    "Special characters only"
     try:
         n = int(length_value)
-        password = ""
-        spc = string.punctuation
-        password = password.join(random.sample(spc, n))
-        return password
+        chars = string.punctuation
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate8():
-    "Upper number"
+    "Uppercase letters and Numbers"
     try:
         n = int(length_value)
-        password = ""
-        up_num = string.ascii_uppercase + string.digits
-        password = password.join(random.sample(up_num, n))
-        return password
+        chars = string.ascii_uppercase + string.digits
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate9():
-    "Smaller Number"
+    "Lowercase letters and Numbers"
     try:
         n = int(length_value)
-        password = ""
-        sm_num = string.digits + string.ascii_lowercase
-        password = password.join(random.sample(sm_num, n))
-        return password
+        chars = string.ascii_lowercase + string.digits
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate10():
-    "Upper Special"
+    "Uppercase letters and Special characters"
     try:
         n = int(length_value)
-        password = ""
-        up_spc = string.ascii_uppercase + string.punctuation
-        password = password.join(random.sample(up_spc, n))
-        return password
+        chars = string.ascii_uppercase + string.punctuation
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate11():
-    "Smaller Special"
+    "Lowercase letters and Special characters"
     try:
         n = int(length_value)
-        password = ""
-        sm_spc = string.punctuation + string.ascii_lowercase
-        password = password.join(random.sample(sm_spc, n))
-        return password
+        chars = string.ascii_lowercase + string.punctuation
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate12():
-    "Smaller Upper Special"
+    "Upper, Lower letters and Special characters"
     try:
         n = int(length_value)
-        password = ""
-        sm_up_spc = string.ascii_uppercase + string.ascii_lowercase + string.punctuation
-        password = password.join(random.sample(sm_up_spc, n))
-        return password
+        chars = string.ascii_uppercase + string.ascii_lowercase + string.punctuation
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate13():
-    "Number Spceial"
+    "Numbers and Special characters"
     try:
         n = int(length_value)
-        password = ""
-        num_spc = string.digits + string.punctuation
-        password = password.join(random.sample(num_spc, n))
-        return password
+        chars = string.digits + string.punctuation
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
-
 
 def generate14():
-    "Smaller Number Special"
+    "Lowercase letters, Numbers and Special characters"
     try:
         n = int(length_value)
-        password = ""
-        sm_num_spc = string.digits + string.ascii_lowercase + string.punctuation
-        password = password.join(random.sample(sm_num_spc, n))
-        return password
+        chars = string.ascii_lowercase + string.digits + string.punctuation
+        return "".join(secrets.choice(chars) for _ in range(n))
     except:
         return "Invalid length_value"
+
 
 
 def copyclip():
@@ -276,5 +236,6 @@ copy_btn = Button(master=root, text="Copy", fg="green",
 
 photo = PhotoImage(file="password.png")
 root.iconphoto(False, photo)
+
 
 root.mainloop()
